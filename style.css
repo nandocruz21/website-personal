@@ -1,0 +1,340 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #3b4047;
+  color: #333;
+  line-height: 1.6; /*Mengatur jarak spasi (ketinggian) antar baris teks.*/
+  min-height: 100vh; /* Tinggi minimal 100% dari layar */
+  display: flex; /*Mengaktifkan mode layout Flexbox pada elemen ini.*/
+  flex-direction: column; /*column berarti elemen-elemen anak (seperti <header>, <main>, <footer>) akan disusun secara vertikal (dari atas ke bawah).*/
+  padding-top: 90px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  display: flex; /*agar logo rapi*/
+  justify-content: space-between; /* Logo di kiri, nav di kanan */
+  align-items: center;
+  border-radius: 6px;
+}
+
+.logo {
+  display: flex; /*mengaktifkan model tata letak (layout) Flexbox pada elemen tersebut.*/
+  align-items: center; /*meratakan item ke bagian tengah*/
+  color: #333;
+  text-decoration: none; /*hilngkan garis di bawah*/
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.logo h1 {
+  font-size: 1.8em; /* Ukuran font judul */
+  margin: 0;
+}
+
+/* Pengaturan Menu Navigasi */
+.tombol {
+  padding: px;
+  margin: 5px;
+}
+
+nav ul a {
+  list-style-type: none; /* Hilangkan bulatan list */
+  background-color: #000000;
+  border-radius: 5px;
+  padding: 2.3px;
+  font-size: 15px;
+  box-shadow: 0 6px 10px #382929;
+}
+
+nav li {
+  display: inline-block; 
+  margin-right: 0px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #8aa9ce; 
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-grow: 1; /* mendorong footer di bawah  */
+}
+
+/* di home kata sambutan */
+p.c1 {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1em;
+  background-color: #ffe6e6;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 30);
+  margin: 20px;
+}
+/* Pengaturan umum untuk gambar dan video */
+img,
+video {
+  max-width: 100%; /* Agar gambar/video tidak keluar dari wadah */
+  height: auto; /* Kembalikan ke default! Biarkan tinggi mengikuti konten */
+  border-radius: 5px; /* Sudut sedikit melengkung */
+}
+/* sabun */
+
+/* Pengaturan audio */
+audio {
+  width: 100%;
+  margin-top: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Garis tabel yang rapi */
+}
+
+th,
+td {
+  border: 1px solid #000000;
+  padding: 12px; /*berfungsi untuk memberikan ruang (jarak) di bagian dalam sebuah elemen*/
+  text-align: left; /*meratakan teks ke sisi kiri dari container*/
+}
+
+th {
+  background-color: #f9f9f9; /* Warna header tabel */
+}
+
+/* === PENGATURAN HALAMAN KONTAK === */
+.kontak-info {
+  font-size: 1.1em;
+}
+
+.kontak-info a {
+  color: #0f0c29;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center; /*berfungsi untuk meratakan teks ke bagian tengah secara horizontal di dalam elemen pembungkusnya*/
+  padding: 0;
+  margin-top: 0;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.9em;
+  border-radius: 5px;
+}
+
+footer a {
+  color: rgb(254, 254, 255);
+  text-decoration: none; /*hilangkan garis bawah*/
+}
+
+footer a:hover {
+  border-bottom: 2px solid #ffffff; /*muncul garis di bawah kalo kena mouse*/
+}
+
+/* === PENGATURAN RESPONSIVE === */
+/* Gunakan ini untuk layar tablet dan di bawahnya */
+@media (max-width: 1024px) {
+  /* --- Header & Navigasi --- */
+  header {
+    flex-direction: unset;
+    padding: 20px; /* Kurangi padding */
+    margin: 0;
+  }
+
+  body {
+    margin-top: 20px;
+    margin: 20px;
+    left: 0;
+    right: 0;
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Beri jarak antara logo dan menu nav */
+    display: inline;
+    margin-left: 40px;
+  }
+
+  .logo h1 {
+    font-size: 2.3em;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 200px;
+    height: 200px;
+    margin-right: 200px;
+  }
+
+  nav {
+    margin-right: 50px;
+  }
+  nav ul {
+    padding-left: 0; /* Hapus padding default <ul> */
+    margin-right: 10px;
+    margin-left: 40px;
+    text-align: center; /* Tengahkan menu */
+  }
+
+  nav li {
+    display:inline-block; /* Buat menu jadi vertikal (susun ke bawah) */
+    margin-top: 20px;
+    margin-bottom: 20px; /* Beri jarak antar menu */
+  }
+
+  nav a {
+    font-size: 1em; /* Sesuaikan ukuran font nav */
+  }
+
+  nav a:hover {
+    border-bottom-width: 2px; /* Tipiskan garis bawah saat di-hover */
+  }
+
+  /* --- Konten Utama --- */
+  main.container {
+    margin: 15px; /* Kurangi margin di sisi layar */
+    padding: 20px; /* Kurangi padding di dalam boks */
+    margin-top: 260px;
+    left: 40px;
+    right: 30px;
+  }
+
+  /* --- Sambutan & Teks --- */
+  p.c1 {
+    font-size: 1em; /* Kecilkan font sambutan */
+    margin: 15px 0;
+    padding: 12px;
+  }
+
+  /* --- Tabel --- */
+  table {
+    display: inline;
+    padding-left: 8.2cm;
+  }
+
+  th,
+  td {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  table {
+    display: inline;
+    padding-left: 4.8cm;
+  }
+}
+/* mx lebar 466 */
+@media (max-width: 466px) {
+  header {
+    display: inline;
+    margin: 0px auto;
+    padding: 40px auto;
+  }
+  .logo {
+    margin-left: 2.4cm;
+  }
+
+  .logo h1 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 150px;
+    height: 150px;
+  }
+
+  nav {
+    padding: 0;
+    margin: 0;
+    margin-left: 21px;
+  }
+
+  nav ul {
+    margin: 0;
+  }
+  main.container {
+    margin-top: 7.7cm;
+  }
+}
+/* max lebar 425 */
+@media (max-width: 425px){
+  .logo {
+    margin-left: 3.1cm;
+  }
+
+}
+/* mx lebar 375 */
+@media (max-width: 375px){
+  .logo {
+    margin-left: 2.4cm;
+  }
+}
+/* mx lebar 320 */
+@media (max-width: 320px) {
+  body {
+    margin-top: 40px;
+    margin-right: 2px;
+    margin-left: 0;
+    z-index: 1000;
+  }
+
+  header {
+    display: inline;
+    margin: 0px auto;
+    padding: 40px auto;
+  }
+
+  .logo {
+    margin-left: 1.7cm;
+  }
+
+  .logo h1 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 150px;
+    height: 150px;
+  }
+
+  nav {
+    padding: 0;
+    margin: 0;
+    display: inline;
+  }
+
+  nav ul {
+    margin: 0;
+  }
+
+  main.container {
+    margin: 0px; /* Perkecil margin */
+    padding: 0px; /* Perkecil padding */
+    margin-top: 7cm;
+  }
+
+  table {
+    padding: 0;
+  }
+
+  p.c1 {
+    font-size: 0.9em;
+  }
+
+  /* --- Footer --- */
+  footer {
+    font-size: 0.8em; /* Kecilkan font footer */
+  }
+}
